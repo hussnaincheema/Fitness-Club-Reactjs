@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 99;
+}
+
+.logo {
+  width: 10rem;
+  height: 3rem;
+}
+
+.header_menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.header_menu .close_icon {
+  visibility: hidden;
+}
+
+.header_menu li:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+.menu_bars {
+  background-color: var(--appColor);
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+}
+
+.menu_bars img {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-top: 0.2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .header_menu {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    padding: 2rem;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    width: 90%;
+  }
+
+  .header_menu {
+    flex-direction: column;
+    background-color: var(--appColor);
+    padding: 8rem 4rem;
+    position: absolute;
+    left: 17rem;
+    gap: 3rem;
+    top: 4rem;
+    border-radius: 0.5rem;
+  }
+
+  .header_menu .close_icon {
+    visibility: visible;
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  .header_menu li {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
