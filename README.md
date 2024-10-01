@@ -1,4 +1,5 @@
 **Fitness Club**
+
 Fitness Club is a modern and responsive web application built with React JS and Vite. This project incorporates various tools and libraries to enhance user experience, animations, and functionality.
 
 **Technologies Used**
