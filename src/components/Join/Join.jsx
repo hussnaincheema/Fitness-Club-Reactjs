@@ -6,20 +6,21 @@ const Join = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        emailjs
-          .sendForm('service_ukawt9g', 'template_lekyxzi', form.current, 'sRYqUxWRS7ub01dtG')
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-    };
-
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   return (
     <div className="join" id="join_us">
